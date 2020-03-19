@@ -1,9 +1,10 @@
 new Vue({
     el:'#vue-app',
     data: {
-        age: 28,
-        x: 0,
-        y: 0
+        name: '',
+        age: '',
+        // x: 0,
+        // y: 0
     },
     methods: {
         // add: function(inc) {
