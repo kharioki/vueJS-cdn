@@ -1,14 +1,20 @@
 new Vue({
     el:'#vue-app',
     data: {
-        name: 'Kharioki',
-        job: 'Avenger',
-        website: 'https://about.me/kharioki',
-        websiteTag: '<a href="https://about.me/kharioki">Khariokis website</a>'
+        age: 28,
+        x: 0,
+        y: 0
     },
     methods: {
-        greet: function(time){
-            return 'Good ' + time + ' ' + this.name
+        add: function(inc) {
+            this.age += inc;
+        },
+        subtract: function(dec) {
+            this.age -= dec;
+        },
+        updateXY: function(event) {
+            this.x = event.offsetX;
+            this.y = event.offsetY;
         }
     }
 });
