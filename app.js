@@ -1,22 +1,21 @@
-new Vue({
-    el:'#vue-app',
-    data: {
-        health: 100,
-        ended: false
-    },
-    methods: {
-        punch: function() {
-            this.health -= 10;
-            if ( this.health <= 0 ) {
-                this.ended = true;
-            }
-        },
-        restart: function() {
-            this.health = 100;
-            this.ended = false;
+Vue.component('greeting', {
+    template: '<p>Hey, I am a {{ name }}!! . <button v-on:click="changeName">Change name</button></p>',
+    data: function() {
+        return {
+            name: 'Yoshi'
         }
     },
-    computed: {
-        
+    methods: {
+        changeName: function() {
+            this.name = 'Mario';
+        }
     }
-});
+})
+
+new Vue({
+    el: '#vue-app-one'
+})
+
+new Vue({
+    el: '#vue-app-two'
+})
